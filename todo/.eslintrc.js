@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb'
+    'airbnb',
+    'plugin:react/jsx-runtime'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -18,6 +19,7 @@ module.exports = {
     'react'
   ],
   rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'comma-dangle': [2, 'never'],
     'linebreak-style': 0,
     'global-require': 0,
