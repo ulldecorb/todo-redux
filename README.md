@@ -17,7 +17,7 @@ todo app on redux ( react + flux )
 ## General info
 This project is a todo list on Redux, the React javascript framework using the unidirectional flow methodology.
 	
-## Technologies
+<!-- ## Technologies
 Project is created with:
 * React: 
 * Redux: 
@@ -31,7 +31,7 @@ To run this project, install it locally using npm:
 $ cd ../todo
 $ npm install
 $ npm start
-```
+``` -->
 <!-- 
 ## Scope of functionalities 
 ### Features
