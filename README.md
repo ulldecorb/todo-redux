@@ -19,10 +19,11 @@ This project is a todo list on Redux, the React javascript framework using the u
 	
 <!-- ## Technologies
 Project is created with:
-* React: 
-* Redux: 
+* React: 17.0.2
+* Redux: 4.1.1
 * Sass:
-* 
+* Eslint: 7.32.0
+* Jest: 
 	
 ## Setup
 To run this project, install it locally using npm:

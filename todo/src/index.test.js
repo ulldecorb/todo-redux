@@ -5,5 +5,5 @@ import index from './index';
 test('when main index', () => {
   render(index);
   const dom = jest.fn(ReactDOM);
-  expect(dom).toBeInTheDocument();
+  expect(dom).toBeCalled();
 });
