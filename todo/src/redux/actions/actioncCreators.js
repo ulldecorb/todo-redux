@@ -20,7 +20,7 @@ export function updateTask(taskId) {
   };
 }
 
-export function deletetask(taskId) {
+export function deleteTask(taskId) {
   return {
     type: actionTypes.DELETE_TASK,
     taskId
