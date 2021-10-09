@@ -14,7 +14,7 @@ function AddTask({ tasks = [], dispatch }) {
     setNewTask('');
   }
   return (
-    <form className="new-task">
+    <>
       <input
         className="new-task__input"
         id="addTask"
@@ -24,9 +24,10 @@ function AddTask({ tasks = [], dispatch }) {
         maxLength="20"
         placeholder="Add new task"
         onChange={(event) => setNewTask(event.target.value)}
+        onKeyDown={(event) => event.key === 'Enter' && handleNewTask()}
       />
       <button type="button" onClick={handleNewTask}>+</button>
-    </form>
+    </>
   );
 }
 
