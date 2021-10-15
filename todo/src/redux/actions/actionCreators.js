@@ -13,10 +13,10 @@ export function addTask(newTask) {
   };
 }
 
-export function updateTask(taskId) {
+export function updateTask(updatedTask) {
   return {
     type: actionTypes.UPDATE_TASK,
-    taskId
+    updatedTask
   };
 }
 
