@@ -14,12 +14,15 @@ function listReducer(list = [], action) {
 
     case actionTypes.DELETE_TASK:
       return [
-        ...list.filter((x) => x.id !== action.taskId)
+        ...list.filter((task) => task.id !== action.taskId)
       ];
+
     case actionTypes.UPDATE_TASK:
-      return [
-        ...list
-      ];
+      return list.map((task) => (task.id === action.updatedTask.id
+        ? { ...task, ...action.updatedTask }
+        : task
+      ));
+
     default:
       return list;
   }
