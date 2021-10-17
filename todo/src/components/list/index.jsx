@@ -14,7 +14,7 @@ function List({ tasks = [], dispatch }) {
     <section className="list">
       <ul className="list__box">
         {tasks.map((item) => (
-          <li className="list__task">
+          <li className="list__task" key={item.id}>
 
             <p className="task__title">
               {item.task}
@@ -27,7 +27,7 @@ function List({ tasks = [], dispatch }) {
               maxLength="20"
               placeholder="Update task"
               onChange={(event) => setUpdatedTask(event.target.value)}
-              autocComplete="off"
+              autoComplete="off"
             />
             <button
               type="button"
