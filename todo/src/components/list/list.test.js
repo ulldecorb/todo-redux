@@ -8,4 +8,8 @@ describe('when List render', () => {
     const deleteSimbol = screen.getByText(/x/ig);
     expect(deleteSimbol).toBeInTheDocument();
   });
+  // test('delete-button dispatch deleteTask function', () => {
+  //   render(<List />);
+
+  // });
 });

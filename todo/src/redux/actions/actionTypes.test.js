@@ -1,9 +1,13 @@
 /* eslint-disable no-undef */
-import { render, document } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import actionTypes from './actionTypes';
 
-test('actiontypes are in the document', () => {
-  render(actionTypes);
-  const addType = document.getByText(/add_task/i);
-  expect(addType).toBeInTheDocument();
+test('should have action-types', () => {
+  const actions = actionTypes;
+  expect(actions).toStrictEqual({
+    LOAD_TASKS: 'LOAD_TASKS',
+    ADD_TASK: 'ADD_TASK',
+    UPDATE_TASK: 'UPDATE_TASK',
+    DELETE_TASK: 'DELETE_TASK'
+  });
 });
