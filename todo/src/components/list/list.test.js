@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import List from './index';
 
 describe('when List render', () => {
