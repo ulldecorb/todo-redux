@@ -23,7 +23,7 @@ Project is created with:
 * React: 17.0.2
 * Redux: 4.1.1
 * Eslint: 7.32.0
-<!-- * Jest:  -->
+* Jest: 5.14.1 
 	
 ## Setup
 To run this project, install it locally using npm:
