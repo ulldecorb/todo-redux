@@ -39,6 +39,7 @@ function List({ tasks = [], dispatch }) {
             <button
               type="button"
               className="task__update-button"
+              data-testid="update-button"
               onClick={() => dispatch(updateTask({ id: item.id, task: updatedTask }))}
             >
               Update
