@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
-    'plugin:react/jsx-runtime'
+    'plugin:react/jsx-runtime',
+    'eslint:recommended'
   ],
   parserOptions: {
     ecmaFeatures: {

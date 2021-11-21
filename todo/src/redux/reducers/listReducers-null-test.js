@@ -1,10 +1,10 @@
 // /* eslint-disable no-undef */
-// import '@testing-library/jest-dom';
+// import '@testing-library/jest-dom/extend-expect';
 // import listReducer from './listReducer';
 
-// describe('listReducer', () => {
-//   test('actionTypes.ADD_TASK add task', () => {
-//     const newTask = { task: 'newtask' };
+// describe('when listReducer', () => {
+//   test('given actionTypes.ADD_TASK should add task', () => {
+//     const newTask = { task: 'test' };
 //     const list = [];
 //     expect(listReducer(list, newTask)).toBe([]);
 //   });
