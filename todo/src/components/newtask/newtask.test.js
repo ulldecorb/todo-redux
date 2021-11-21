@@ -8,10 +8,17 @@ describe('when AddTask is render', () => {
   const Wrapper = () => (
     <Provider store={store}><AddTask /></Provider>
   );
-  const component = render(<AddTask tasks={[]} />, { wrapper: Wrapper });
   test('input value change when write on it', () => {
+    const component = render(<AddTask tasks={[]} />, { wrapper: Wrapper });
     const input = component.getByPlaceholderText('Add new task');
     fireEvent.change(input, { target: { value: 'test it' } });
     expect(input.value).toBe('test it');
+  });
+  test('input invoke function when keydown enter key', () => {
+    const mockHandler = jest.fn();
+    const component = render(<AddTask tasks={[]} dispatch={mockHandler} />, { wrapper: Wrapper });
+    const input = component.getByPlaceholderText('Add new task');
+    fireEvent.keyDown(input, { key: 'Enter', code: 'Enter', charCode: 13 });
+    expect(mockHandler).toHaveBeenCalledTimes(0);
   });
 });
