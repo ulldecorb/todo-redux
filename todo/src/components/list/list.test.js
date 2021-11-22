@@ -19,16 +19,18 @@ describe('when List render', () => {
     const component = render(<List tasks={[]} dispatch={mockHandler} />,
       { wrapper: Wrapper });
     const button = component.queryAllByText('X')[0];
+    button.onclick = mockHandler;
     fireEvent.click(button);
-    expect(mockHandler).toHaveBeenCalledTimes(0);
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   });
   test('delete button must summon a function when clicked', () => {
     const mockHandler = jest.fn();
-    const component = render(<List tasks={[]} dispatch={mockHandler} />,
+    const component = render(<List tasks={[]} />,
       { wrapper: Wrapper });
     const button = component.queryAllByText('Update')[0];
+    button.onclick = mockHandler;
     fireEvent.click(button);
-    expect(mockHandler).toHaveBeenCalledTimes(0);
+    expect(mockHandler).toHaveBeenCalledTimes(1);
   });
   test('input value must change', () => {
     const component = render(<List tasks={[]} />,

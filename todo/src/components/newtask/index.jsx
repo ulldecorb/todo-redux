@@ -21,7 +21,7 @@ function AddTask({ tasks = [], dispatch }) {
         type="text"
         value={newTask}
         // eslint-disable-next-line react/no-unknown-property
-        autocomplete="off"
+        autoComplete="off"
         maxLength="20"
         placeholder="Add new task"
         onChange={(event) => setNewTask(event.target.value)}
